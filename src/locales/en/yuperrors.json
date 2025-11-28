@@ -1,0 +1,38 @@
+{
+  "": {},
+  "sample": "sample",
+  "undefined error": "Undefined error",
+  "login": {
+    "email or password is invalid": "Your email or password is invalid"
+  },
+  "email": {
+    "Email address is required": "Email address is required",
+    "Incorrect email format": "Incorrect email format",
+    "Email address must have at least 5 characters": "Email address must have at least 5 characters",
+    "Email address can only have a total length of 160 characters": "Email address can only have a total length of 160 characters"
+  },
+  "password": {
+    "Password is required": "Password is required",
+    "Password must be 8-16 characters": "Password must be 8-16 characters",
+    "Confirm Password is required": "Confirm Password is required",
+    "Passwords do not match": "Passwords do not match"
+  },
+  "register": {
+    "Name is required": "Name is required",
+    "Phone number is required": "Phone number is required"
+  },
+  "price": {
+    "Price range is not allowed": "Price range is not allowed"
+  },
+  "user": {
+    "Maximum name length is 160 character": "Maximum name length is 160 character",
+    "Maximum phone number length is 20 characters": "Maximum phone number length is 20 characters",
+    "Can not use this image": "Can not use this image"
+  },
+  "order": {
+    "Customer name is required": "Customer name is required",
+    "Customer email address is required": "Customer email address is required",
+    "Customer phone number is required": "Customer phone number is required",
+    "Address is required": "Delivery address is required"
+  }
+}

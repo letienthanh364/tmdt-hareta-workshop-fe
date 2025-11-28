@@ -1,0 +1,18 @@
+{
+  "": {},
+  "sample": "sample",
+  "title": "Bài viết",
+  "path": {
+    "home": "Trang chủ",
+    "blog": "Bài viết"
+  },
+  "card": {
+    "Posted on": "Đăng ngày"
+  },
+  "list": {
+    "Clear": "Xóa"
+  },
+  "detail": {
+    "Related posts": "Bài viết tương tự"
+  }
+}

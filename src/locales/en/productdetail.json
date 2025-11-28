@@ -1,0 +1,46 @@
+{
+  "path": {
+    "home": "home",
+    "store": "store"
+  },
+  "sidebar": {
+    "variant": "Variant",
+    "variants": "variants",
+    "quantity": "Quantity",
+    "available": "available",
+    "buy": "Buy",
+    "only": "Only",
+    "out of stock": "out of stock"
+  },
+  "message": {
+    "Add to cart": "Add to cart",
+    "Cart expires soon": "Cart expires soon",
+    "Items added without": "Items added without",
+    "are temporary": "are temporary",
+    "to": "to",
+    "your items": "your items",
+    "login": "login",
+    "save": "save",
+    "Continue": "Continue",
+    "Product was added to cart": "Product was added to cart",
+    "Product was added to wish list": "Product was added to wish list",
+    "The quantity of the current item you are trying to add exceed our store": "The quantity of the current item you are trying to add exceed our store",
+    "Something went wrong, please try again": "Something went wrong, please try again"
+  },
+  "tag": {
+    "top seller": "Top seller",
+    "signature": "Signature",
+    "favourite": "Favourite"
+  },
+  "detail": {
+    "Detail": "Detail",
+    "Category": "Category",
+    "Collection": "Collection",
+    "Type": "Type",
+    "Product line": "Product line",
+    "In store": "In store",
+    "Extend": "Extend",
+    "Collapse": "Collapse",
+    "Order": "Order"
+  }
+}

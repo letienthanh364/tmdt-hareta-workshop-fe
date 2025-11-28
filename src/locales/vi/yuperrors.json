@@ -1,0 +1,38 @@
+{
+  "": {},
+  "sample": "sample",
+  "undefined error": "Lỗi không xác định",
+  "login": {
+    "email or password is invalid": "Tài khoản hoặc mật khẩu của bạn không đúng"
+  },
+  "email": {
+    "Email address is required": "Bạn cần phải điền địa chỉ email",
+    "Incorrect email format": "Địa chỉ email sai định dạng",
+    "Email address must have at least 5 characters": "Địa chỉ email phải có ít nhất 5 kí tự",
+    "Email address can only have a total length of 160 characters": "Địa chỉ email chỉ có thể bao gồm tối đa 160 kí tự"
+  },
+  "password": {
+    "Password is required": "Bạn cần phải điền mật khẩu",
+    "Password must be 8-16 characters": "Mật khẩu phải bao gồm từ 8 đến 16 kí tự",
+    "Confirm Password is required": "Bạn cần phải nhập lại mật khẩu",
+    "Passwords do not match": "Mật khẩu không khớp"
+  },
+  "register": {
+    "Name is required": "Bạn cần điền tên của mình",
+    "Phone number is required": "Bạn cần điền số điện thoại của mình"
+  },
+  "price": {
+    "Price range is not allowed": "Khoảng giá không hợp lệ"
+  },
+  "user": {
+    "Maximum name length is 160 character": "Độ dài tối đa của tên là 160 kí tự",
+    "Maximum phone number length is 20 characters": "Độ dài tối đa của số điện thoại là 20 kí tự",
+    "Can not use this image": "Không thể sử dụng hình ảnh này"
+  },
+  "order": {
+    "Customer name is required": "Bạn cần điền tên của người mua hàng",
+    "Customer phone number is required": "Bạn cần điền số điện thoại của người mua hàng",
+    "Customer email address is required": "Bạn cần điền địa chỉ email của người mua hàng",
+    "Address is required": "Bạn cần điền địa chỉ nhận hàng"
+  }
+}

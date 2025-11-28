@@ -1,0 +1,64 @@
+{
+  "helmet": {
+    "Login": "Login",
+    "Securely log in to access your account and enjoy a personalized shopping experience with our unique handcrafted keycaps.": "Securely log in to access your account and enjoy a personalized shopping experience with our unique handcrafted keycaps.",
+    "Register": "Register",
+    "Create a new account to explore our collection of handcrafted keycaps and receive exclusive offers and updates.": "Create a new account to explore our collection of handcrafted keycaps and receive exclusive offers and updates."
+  },
+  "login": {
+    "home": "Home",
+    "login": "Login",
+    "password": "Password",
+    "Don't have an account?": "Don't have an account?",
+    "Forgot Password?": "Forgot password?",
+    "email": "Email address",
+    "sign up": "Sign up"
+  },
+  "register": {
+    "register": "register",
+    "Email address": "Email address",
+    "Password": "Password",
+    "Confirm password": "Confirm password",
+    "Name": "Name",
+    "Phone number": "Phone number",
+    "Already have an account?": "Already have an account?"
+  },
+  "password": {
+    "password recovery": "password recovery",
+    "Email address": "Email address",
+    "Send": "Send",
+    "Go back to": "Go back to",
+    "Wait for": "Wait for",
+    "second": "second",
+    "seconds": "seconds"
+  },
+  "dialog": {
+    "Undefined error": "Undefined error",
+    "Please try again": "Please try again",
+
+    "Your password is changed successfully": "Your password is changed successfully",
+    "You can": "You can",
+    "login": "login",
+    "to continue shopping": "to continue shopping",
+
+    "Your email is verified": "Your email is verified",
+
+    "A password reset link has been sent to your email inbox": "A password reset link has been sent to your email inbox",
+    "reset your password": "reset your password",
+
+    "The link you have tried appears to be invalid.": "The link you have tried appears to be invalid.",
+    "Please": "Please",
+    "check and try again": "check and try again",
+
+    "Please verify your email": "Please verify your email",
+    "An email has been sent to your address": "An email has been sent to your address",
+    "Resend Email": "Resend",
+    "Please check your email inbox and click on the confirmation link to verify your email address.": "Please check your email inbox and click on the confirmation link to verify your email address.",
+    "Wrong email address?": "Wrong email address?",
+    "Go back": "Go back",
+
+    "A verification link has been sent to your email address": "A verification link has been sent to your email address",
+    "Please follow the link provided in the email to ": "Please follow the link provided in the email to ",
+    "verify your email address": "verify your email address"
+  }
+}

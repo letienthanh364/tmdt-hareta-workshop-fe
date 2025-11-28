@@ -1,0 +1,30 @@
+{
+  "navbar": {
+    "home": "Home",
+    "store": "Store",
+    "event": "Event",
+    "support": "Support",
+    "blog": "Blog",
+    "login": "Login"
+  },
+  "support": {
+    "about us": "about us",
+    "privacy & terms": "privacy & terms",
+    "faq": "faq",
+    "contact us": "contact us",
+    "order tracking": "order tracking"
+  },
+  "cart button": {
+    "items in cart": "items in cart",
+    "buy": "Buy",
+    "remove": "Remove",
+    "store": "Store",
+    "enter cart": "Enter cart"
+  },
+  "user": {
+    "profile": "Profile",
+    "inventory": "Inventory",
+    "wishlist": "Wishlist",
+    "log out": "Log Out"
+  }
+}

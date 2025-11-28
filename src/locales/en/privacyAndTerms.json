@@ -1,0 +1,116 @@
+{
+  "": {
+    "sample": "sample"
+  },
+  "sample": "sample",
+  "path": {
+    "Privacy & Terms": "Privacy & Terms"
+  },
+  "helmet": {
+    "title": "Privacy & Terms",
+    "description": "Read our Privacy Policy and Terms of Service to understand how we protect your data and ensure a secure shopping experience."
+  },
+  "title": {
+    "Privacy and terms": "Privacy and terms",
+    "ProductInformation": "Product Information",
+    "OrderingAndPayments": "Ordering and Payment",
+    "ShippingAndDelivery": "Shipping and Delivery",
+    "ReturnsAndRefunds": "Returns and Refunds",
+    "ProductWarranty": "Product Warranty",
+    "IntellectualProperty": "Intellectual Property",
+    "InformationCollection": "Information Collection",
+    "UseOfInformation": "Use of Information",
+    "DataProtection": "Data Protection",
+    "SharingOfInformation": "Sharing of Information",
+    "CookiesAndTracking": "Cookies and Tracking Technologies",
+    "ThirdPartyLinks": "Third-party Links",
+    "ChildrenPrivacy": "Children's Privacy",
+    "ChangeToThePrivacyPolicy": "Changes to the Privacy Policy",
+    "TermAndConditions": "Terms and Conditions"
+  },
+  "ProductInformation": {
+    "title": "1. Product Information:",
+    "a": "1.1. Our artisan keycaps are handcrafted and made with high-quality materials.",
+    "b": "1.2. Each keycap is unique and may have slight variations in color, texture, and design.",
+    "c": "1.3. Product images on our website are for illustrative purposes only. Actual products may differ slightly."
+  },
+  "OrderingAndPayments": {
+    "title": "2. Ordering and Payment:",
+    "a": "2.2. Orders can be placed through our website or other designated platforms.",
+    "b": "2.2. Payment must be made in full at the time of placing the order.",
+    "c": "2.3. We accept various payment methods, including credit/debit cards and online payment gateways."
+  },
+  "ShippingAndDelivery": {
+    "title": "3. Shipping and Delivery:",
+    "a": "3.1. Your order information will be provided after the payment process is completed. Shipping costs will be fully supported by Hareta Workshop.",
+    "b": "3.2. We strive to process and ship orders within a reasonable timeframe.",
+    "c": "3.3. We are not responsible for any delays or damages caused by the shipping carrier."
+  },
+  "ReturnsAndRefunds": {
+    "title": "4. Returns and Refunds:",
+    "a": "4.1. We accept returns within 14 days of delivery for unused and undamaged products.",
+    "b": "4.2. Customers are responsible for return shipping costs unless the product is defective or damaged.",
+    "c": "4.3. Refunds will be issued within a reasonable timeframe after receiving the returned product."
+  },
+  "ProductWarranty": {
+    "title": "5. Product Warranty:",
+    "a": "5.1. Our artisan keycaps come with a limited warranty against manufacturing defects.",
+    "b": "5.2. The warranty does not cover damages caused by misuse, accidents, or improper handling.",
+    "c": "5.3. To claim warranty, customers must provide proof of purchase and contact our customer support."
+  },
+  "IntellectualProperty": {
+    "title": "6. Intellectual Property:",
+    "a": "6.1. All designs, logos, and trademarks displayed on our products are the property of our company.",
+    "b": "6.2. Unauthorized use or reproduction of our intellectual property is strictly prohibited."
+  },
+  "InformationCollection": {
+    "title": "7. Information Collection:",
+    "We may collect personal information from you when you visit our website or place an order for our products. The types of information we may collect include:": "We may collect personal information from you when you visit our website or place an order for our products. The types of information we may collect include:",
+    "- Contact details (name, email address, phone number)": "- Contact details (name, email address, phone number)",
+    "- Shipping and billing addresses": "- Shipping and billing addresses",
+    "- Payment information (credit card details)": "- Payment information (credit card details)",
+    "- Order history": "- Order history"
+  },
+  "UseOfInformation": {
+    "title": "8. Use of Information:",
+    "We use the collected information for various purposes including:": "We use the collected information for various purposes including:",
+    "- Processing and fulfilling your orders": "- Processing and fulfilling your orders",
+    "- Communicating with you about your orders or inquiries": "- Communicating with you about your orders or inquiries",
+    "- Providing customer support services": "- Providing customer support services",
+    "- Improving our products and services": "- Improving our products and services",
+    "- Sending promotional offers or newsletters (with your consent)": "- Sending promotional offers or newsletters (with your consent)"
+  },
+  "DataProtection": {
+    "title": "9. Data Protection:",
+    "content": "We take appropriate measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. We implement industry-standard security practices such as encryption during data transmission and storage."
+  },
+  "SharingOfInformation": {
+    "title": "10. Sharing of Information:",
+    "content": "We do not sell or rent your personal information to third parties for marketing purposes without obtaining your explicit consent. However, we may share certain data with trusted service providers who assist us in operating our business effectively (e.g., payment processors). In some cases, we may be required by law to disclose certain personal information if requested by a government authority."
+  },
+  "CookiesAndTracking": {
+    "title": "11. Cookies and Tracking Technologies:",
+    "content": "Our website uses cookies and similar tracking technologies to enhance user experience and gather statistical data about site usage patterns. You can choose to disable cookies through your browser settings; however, please note that this might limit some functionalities on our website."
+  },
+  "ThirdPartyLinks": {
+    "title": "12. Third-party Links:",
+    "content": "Our website may contain links to third-party websites that are not under Hareta workshop's control. We are not responsible for the privacy practices or content of these websites. We encourage you to review their respective privacy policies."
+  },
+  "ChildrenPrivacy": {
+    "title": "13. Children's Privacy:",
+    "content": "Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have inadvertently collected data from a child, we will promptly delete it."
+  },
+  "ChangeToThePrivacyPolicy": {
+    "title": "14. Changes to the Privacy Policy:",
+    "content": "We reserve the right to update or modify this Privacy Policy at any time without prior notice. Any changes will be effective immediately upon posting on our website."
+  },
+  "TermAndConditions": {
+    "title": "15. Terms and Conditions:",
+    "content": "In addition to our Privacy Policy, please also review our Terms and Conditions which govern your use of our website and purchase of products."
+  },
+  "Contact": {
+    "title": "Contact us:",
+    "guide": "If you have any questions or concerns about our privacy practices, please contact us via email: ",
+    "hareta.manage@gmail.com": "hareta.manage@gmail.com"
+  }
+}

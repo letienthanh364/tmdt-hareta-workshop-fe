@@ -1,0 +1,3 @@
+import AuthPasswordRecoveryRequestEmail from './AuthPasswordRecoveryRequestEmail'
+
+export default AuthPasswordRecoveryRequestEmail

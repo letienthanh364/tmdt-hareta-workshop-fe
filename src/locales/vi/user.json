@@ -1,0 +1,57 @@
+{
+  "path": {
+    "home": "Trang chủ",
+    "user": "Người dùng"
+  },
+  "helmet": {
+    "title": "Cá nhân",
+    "description": "Quản lý thông tin tài khoản, xem lịch sử đơn hàng, và tùy chỉnh sở thích của bạn để có trải nghiệm mua sắm cá nhân hóa."
+  },
+  "layout": {
+    "profile": "Thông tin",
+    "password": "Mật khẩu",
+    "inventory": "Kho đồ",
+    "wishlist": "Danh sách mong muốn"
+  },
+  "profile": {
+    "joined": "Ngày tham gia",
+    "name": "Tên",
+    "phone number": "Số điện thoại",
+    "email": "Địa chỉ email",
+    "edit": "Chỉnh sửa",
+    "save": "Lưu",
+    "cancel": "Hủy bỏ",
+    "message": "Thông tin của bạn đã được cập nhật",
+    "upload avatar": "Chọn ảnh"
+  },
+  "password": {
+    "current password": "Mật khẩu hiện tại",
+    "new password": "Mật khẩu mới",
+    "confirm new password": "Nhập lại mật khẩu mới",
+    "cancel": "Hủy bỏ",
+    "change password": "Đổi mật khẩu",
+    "message": "Đổi mật khẩu thành công!",
+    "go to login": "Đi tới đăng nhập"
+  },
+  "wishlist": {
+    "remove": "Xóa",
+    "message": "Sản phẩm đã được thêm vào giỏ hàng",
+    "remove message": "Xóa sản phẩm khỏi danh sách mong muốn?",
+    "cancel": "Hủy bỏ",
+    "top seller": "Bán chạy",
+    "signature": "Đặc trưng",
+    "favourite": "Yêu thích"
+  },
+  "inventory": {
+    "Title": "Kho đồ của bạn",
+    "Describe": "Sản phẩm bạn đã mua sẽ được hiện ở đây",
+
+    "remove": "Remove",
+    "message": "Item was added to cart",
+    "remove message": "Remove this item from your wishlist?",
+    "cancel": "Cancel",
+    "top seller": "Top seller",
+    "signature": "Signature",
+    "favourite": "Favourite"
+  }
+}

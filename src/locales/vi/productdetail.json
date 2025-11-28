@@ -1,0 +1,46 @@
+{
+  "path": {
+    "home": "Trang chủ",
+    "store": "Cửa hàng"
+  },
+  "sidebar": {
+    "variant": "Phiên bản",
+    "variants": "phiên bản",
+    "quantity": "Số lượng",
+    "available": "trong cửa hàng",
+    "buy": "Mua",
+    "only": "Chỉ còn",
+    "out of stock": "hết hàng"
+  },
+  "message": {
+    "Add to cart": "Thêm vào giỏ hàng",
+    "Cart expires soon": "Giỏ hàng sẽ không được lưu lại",
+    "Items added without": "Sản phẩm được thêm vào giỏ hàng khi mà không",
+    "are temporary": "chỉ là tạm thời",
+    "to": "để",
+    "your items": "sản phẩm của bạn",
+    "login": "đăng nhập",
+    "save": "lưu lại",
+    "Continue": "Thêm sản phẩm",
+    "Product was added to cart": "Sản phẩm đã được thêm vào giỏ hàng",
+    "Product was added to wish list": "Sản phẩm đã được thêm vào danh sách yêu thích",
+    "The quantity of the current item you are trying to add exceed our store": "Số lượng mà bạn muốn thêm vào giỏ hàng vượt quá số lượng hiện có của sản phẩm trong cửa hàng",
+    "Something went wrong, please try again": "Đã có lỗi xảy ra, vui lòng thử lại"
+  },
+  "tag": {
+    "top seller": "Bán chạy",
+    "signature": "Đặc trưng",
+    "favourite": "Yêu thích"
+  },
+  "detail": {
+    "Detail": "Chi tiết",
+    "Category": "Hạng mục",
+    "Collection": "Bộ sưu tập",
+    "Type": "Loại",
+    "Product line": "Dòng sản phẩm",
+    "In store": "Trong cửa hàng",
+    "Extend": "Mở rộng",
+    "Collapse": "Ẩn",
+    "Order": "Đặt hàng"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pagination": {
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "no products": {
+    "store": {
+      "title": "No search results found",
+      "message": "We are sorry. We can not find the item you are searching for"
+    },
+    "order": {
+      "title": "You are not having any orders",
+      "message": "Seem like you have not ordered anything from Hareta Workshop",
+      "go to": "Go to",
+      "store": "Store",
+      "now": "now"
+    }
+  },
+  "error messages": {
+    "User not found": "User not found",
+    "Invalid request": "Invalid request",
+    "Cannot get the order": "Cannot get the order",
+    "Network Error": "Network Error",
+    "Undefined Error": "Undefined Error",
+    "Timeout Error": "Timeout Error",
+    "next": "Next"
+  }
+}

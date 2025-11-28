@@ -1,0 +1,28 @@
+{
+  "pagination": {
+    "prev": "Trước",
+    "next": "Sau"
+  },
+  "no products": {
+    "store": {
+      "title": "Không thể tìm thấy sản phẩm",
+      "message": "Không thể tìm thấy sản phẩm bạn mong muốn trong cửa hàng"
+    },
+    "order": {
+      "title": "Bạn không có bất kì đơn hàng nào",
+      "message": "Có vẻ bạn chưa từng mua hàng ở Hareta Workshop",
+      "go to": "Đi tới",
+      "store": "Cửa hàng",
+      "now": ""
+    }
+  },
+  "error messages": {
+    "User not found": "Không tìm thấy người dùng",
+    "Invalid request": "Yêu cầu không hợp lệ",
+    "Cannot get the order": "Không thể lấy đơn hàng",
+    "Network Error": "Lỗi mạng",
+    "Undefined Error": "Lỗi không xác định",
+    "Timeout Error": "Quá thời gian chờ",
+    "next": "Next"
+  }
+}

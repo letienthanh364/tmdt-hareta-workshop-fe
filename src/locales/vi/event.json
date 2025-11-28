@@ -1,0 +1,28 @@
+{
+  "": {},
+  "sample": "sample",
+  "title": "Sự kiện",
+  "path": {
+    "home": "Trang chủ",
+    "event": "Sự kiện"
+  },
+
+  "list": {
+    "Clear": "clear",
+    "Go to event": "Đi tới sự kiện"
+  },
+  "event page": {
+    "Ongoing events": "Các sự kiện đang diễn ra"
+  },
+  "detail": {
+    "Products in event": "Sản phẩm trong sự kiện",
+    "Claim your coupon": "Nhận mã ưu đãi",
+    "Get the coupon": "Lấy mã",
+    "Shopping now": "Đi tới cửa hàng",
+    "Use this coupon code when shopping to receive discounts from Hareta Workshop.": "Sử dụng mã này khi mua sản phẩm để nhận được những ưu đãi từ Hareta Workshop."
+  },
+  "helmet": {
+    "title": "Sự kiện",
+    "description": "Đừng bỏ lỡ các sự kiện giảm giá độc quyền tại Hareta Workshop! Tham gia ngay các ưu đãi dành cho keycap thủ công và nâng cấp bàn phím của bạn với các thiết kế độc đáo."
+  }
+}

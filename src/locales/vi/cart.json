@@ -1,0 +1,33 @@
+{
+  "": {},
+  "sample": "sample",
+  "path": {
+    "home": "Trang chủ",
+    "cart": "Giỏ hàng"
+  },
+  "content": {
+    "Product": "Sản phẩm",
+    "Unit price": "Đơn giá",
+    "Quantity": "Số lượng",
+    "Subtotal": "Thành tiền",
+    "Discount": "Giảm giá",
+    "Discounted price": "Giá ưu đãi",
+    "Action": "Thao tác",
+    "Remove": "Xóa",
+    "Select all": "Tất cả",
+    "Order": "Đặt hàng",
+    "Check out": "Thanh toán",
+    "total": "Tổng tiền",
+    "item is selected": "sản phẩm được chọn",
+    "items are selected": "sản phẩm được chọn",
+    "Price": "Thành tiền",
+    "Go to store": "Đi đến cửa hàng"
+  },
+  "coupon": {
+    "You are having coupons?": "Bạn có mã ưu đãi?",
+    "Use now": "Sử dụng ngay",
+    "Use the codes received from events or previous purchases to get discounts": "Sử dụng mã nhận từ sự kiện hay các lần mua hàng trước để được nhận các ưu đãi",
+    "Use": "Áp dụng",
+    "Invalid coupon": "Mã không hợp lệ"
+  }
+}

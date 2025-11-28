@@ -1,0 +1,55 @@
+{
+  "helmet": {
+    "Login": "Đăng nhập",
+    "Login to Hareta Workshop": "Đăng nhập an toàn để truy cập tài khoản của bạn và tận hưởng trải nghiệm mua sắm cá nhân hóa với các keycap thủ công độc đáo của chúng tôi.",
+    "Register": "Đăng ký",
+    "Register new account to Hareta Workshop": "Tạo tài khoản mới để khám phá bộ sưu tập keycap thủ công của chúng tôi và nhận các ưu đãi, cập nhật độc quyền."
+  },
+  "login": {
+    "home": "Trang chủ",
+    "login": "Đăng nhập",
+    "password": "Mật khẩu",
+    "Don't have an account?": "Chưa có tài khoản?",
+    "Forgot Password?": "Quên mật khẩu?",
+    "email": "Địa chỉ email",
+    "sign up": "Đăng kí"
+  },
+  "register": {
+    "register": "Đăng kí",
+    "Email address": "Địa chỉ email",
+    "Password": "Mật khẩu",
+    "Confirm password": "Nhập lại mật khẩu",
+    "Name": "Tên người dùng",
+    "Phone number": "Số điện thoại",
+    "Already have an account?": "Đã có tài khoản?"
+  },
+  "dialog": {
+    "Undefined error": "Lỗi không xác định",
+    "Please try again": "Vui lòng thử lại",
+
+    "Your password is changed successfully": "Mật khẩu của bạn đã được thay đổi",
+    "You can": "Bạn có thể",
+    "login": "đăng nhập",
+    "to continue shopping": "để tiếp tục mua sắm",
+
+    "Your email is verified": "Đã xác thực email thành công",
+
+    "A password reset link has been sent to your email inbox": "Một liên kết đặt lại mật khẩu đã được gửi đến hộp thư điện tử của bạn.",
+    "reset your password": "đặt lại mật khẩu của bạn",
+
+    "The link you have tried appears to be invalid.": "Liên kết bạn vừa sử dụng không hợp lệ.",
+    "Please": "Vui lòng",
+    "check and try again": "kiểm tra và thử lại",
+
+    "Please verify your email": "Vui lòng xác minh địa chỉ Email",
+    "An email has been sent to your address": "Một email đã được gửi đến địa chỉ",
+    "Please check your email inbox and click on the confirmation link to verify your email address.": "Vui lòng kiểm tra hộp thư và nhấp vào liên kết xác nhận để xác minh địa chỉ email của bạn.",
+    "Resend Email": "Gửi lại",
+    "Wrong email address?": "Sai địa chỉ email?",
+    "Go back": "Quay lại",
+
+    "A verification link has been sent to your email address": "Một liên kết xác minh đã được gửi đến địa chỉ email của bạn",
+    "Please follow the link provided in the email to ": "Vui lòng theo dõi liên kết trong email để ",
+    "verify your email address": "xác minh địa chỉ email của bạn"
+  }
+}

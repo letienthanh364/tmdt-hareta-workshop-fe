@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* !Variables */
+:root {
+  /* Light theme variables */
+  --scrollbar-bg: #e0e0e0;
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #b3b3cc;
+  --scrollbar-thumb-hover: #a0a0a0;
+  --background-color: #868688;
+}
+
+[data-theme='dark'] {
+  /* Dark theme variables */
+  --scrollbar-bg: #1d1d22;
+  --scrollbar-track: #2c2c32;
+  --scrollbar-thumb: #59595f;
+  --scrollbar-thumb-hover: #555;
+  --background-color: #868688;
+}
+
+html {
+  height: 100%;
+  line-height: 1.2;
+  overflow-y: auto;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+/* !Scroll bar style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  z-index: 50;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition-delay: 9999s;
+  -webkit-text-fill-color: #ff8800;
+}

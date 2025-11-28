@@ -1,0 +1,3 @@
+import SuccessPasswordRecoveryPopup from './SuccessPasswordRecoveryPopup'
+
+export default SuccessPasswordRecoveryPopup

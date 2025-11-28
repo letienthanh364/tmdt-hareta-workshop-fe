@@ -1,0 +1,18 @@
+{
+  "": {},
+  "sample": "sample",
+  "title": "Blog",
+  "path": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "card": {
+    "Posted on": "Posted on"
+  },
+  "list": {
+    "Clear": "clear"
+  },
+  "detail": {
+    "Related posts": "Related posts"
+  }
+}

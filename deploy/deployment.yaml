@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    namespace: frontend
+    name: hareta-frontend
+    labels:
+        app: frontend
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: frontend
+    template:
+        metadata:
+            labels:
+                app: frontend
+        spec:
+            containers:
+                - name: hareta-frontend
+                  image: toan3082004/hareta-fe:latest
+                  ports:
+                      - containerPort: 80
+                  imagePullPolicy: Always
+            imagePullSecrets:
+                - name: docker

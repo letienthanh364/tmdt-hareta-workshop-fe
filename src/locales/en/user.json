@@ -1,0 +1,56 @@
+{
+  "path": {
+    "home": "home",
+    "user": "User"
+  },
+  "helmet": {
+    "title": "User",
+    "description": "Manage your account details, view order history, and customize your preferences for a personalized shopping experience."
+  },
+  "layout": {
+    "profile": "Profile",
+    "password": "Password",
+    "inventory": "Inventory",
+    "wishlist": "Wishlist"
+  },
+  "profile": {
+    "joined": "Joinded in",
+    "name": "name",
+    "phone number": "phone number",
+    "email": "email",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "message": "Your profile was updated",
+    "upload avatar": "Upload avatar"
+  },
+  "password": {
+    "current password": "current password",
+    "new password": "new password",
+    "confirm new password": "confirm new password",
+    "cancel": "Cancel",
+    "change password": "Change password",
+    "message": "Password changed successfully!",
+    "go to login": "Go to login"
+  },
+  "wishlist": {
+    "remove": "Remove",
+    "message": "Item was added to cart",
+    "remove message": "Remove this item from your wishlist?",
+    "cancel": "Cancel",
+    "top seller": "Top seller",
+    "signature": "Signature",
+    "favourite": "Favourite"
+  },
+  "inventory": {
+    "Title": "Your inventory",
+    "Describe": "Your purchased products will be shown here",
+    "remove": "Remove",
+    "message": "Item was added to cart",
+    "remove message": "Remove this item from your wishlist?",
+    "cancel": "Cancel",
+    "top seller": "Top seller",
+    "signature": "Signature",
+    "favourite": "Favourite"
+  }
+}

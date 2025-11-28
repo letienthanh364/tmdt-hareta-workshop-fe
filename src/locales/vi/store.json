@@ -1,0 +1,29 @@
+{
+  "aside filter": {
+    "search": "Tìm kiếm",
+    "sort by": "Xếp theo",
+    "price": "Giá",
+    "from": "Từ",
+    "to": "đến",
+    "apply": "Áp dụng",
+    "filter": "Bộ lọc",
+    "category": "Hạng mục",
+    "collection": "Bộ sưu tập",
+    "type": "Loại",
+    "all": "Tất cả",
+    "clear": "Xóa bộ lọc",
+    "newest": "Mới nhất",
+    "top seller": "Bán chạy",
+    "signature": "Đặc trưng",
+    "favourite": "Yêu thích",
+    "reset": "Hủy"
+  },
+  "path bar": {
+    "home": "Trang chủ",
+    "store": "Cửa hàng"
+  },
+  "helmet": {
+    "Store": "Cửa hàng",
+    "Discover our store for unique, handcrafted keycaps. Each piece is a work of art, blending quality and creativity to enhance your keyboard's personality and style.": "Khám phá cửa hàng của chúng tôi với những sản phẩm keycap thủ công độc đáo. Mỗi một sản phẩm là một tác phẩm nghệ thuật, kết hợp chất lượng và sáng tạo để tăng thêm cá tính và phong cách cho bàn phím của bạn."
+  }
+}
