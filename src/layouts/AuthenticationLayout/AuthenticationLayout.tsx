@@ -10,9 +10,9 @@ export default function AuthenticationLayout({ children }: Props) {
   const { theme } = useContext(AppContext)
   return (
     <div
-      className='min-h-screen bg-cover bg-center duration-200 '
+      className='min-h-screen bg-center duration-200 '
       style={{
-        backgroundImage: `url(${theme === 'dark' ? './images/background-light.png' : './images/background-dark.png'})`
+        backgroundImage: `url(${theme === 'dark' ? './images/background.png' : './images/background.png'})`
       }}
     >
       <RegisterHeader />

@@ -67,7 +67,7 @@ export default function FooterDesktop() {
           </div>
           <div className='col-span-1 flex flex-col justify-start space-y-2 px-2 desktop:px-4'>
             <p>contact.hareta@gmail.com</p>
-            <p>0818266375</p>
+            <p>0394030604</p>
           </div>
         </div>
         <div className='relative grid grid-cols-5 gap-1 desktop:gap-2 desktopLarge:gap-4'>
