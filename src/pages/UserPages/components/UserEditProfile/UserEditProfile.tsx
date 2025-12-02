@@ -55,6 +55,7 @@ export default function UserEditProfile() {
                 inputClassName='text-sm w-full py-1 bg-transparent desktop:text-base outline-none duration-200 autofill:text-darkText dark:caret-white autofill:dark:text-textVintage'
                 errorMessage={errors.phone?.message}
                 autoComplete='false'
+                integerOnly
                 {...field}
                 onChange={field.onChange}
               />

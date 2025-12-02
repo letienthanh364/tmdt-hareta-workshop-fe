@@ -29,6 +29,7 @@ export default function QuantityController({
   classNameButton = 'round flex items-center justify-center rounded-full bg-white p-1 text-darkText dark:bg-black dark:text-lightText border border-black/20 dark:border-white/20',
   classNameIcon = 'text-xs desktop:text-base',
   value,
+  integerOnly = true,
   ...rest
 }: Props) {
   const [localValue, setLocalValue] = useState<number>(Number(value || 0))
@@ -82,6 +83,7 @@ export default function QuantityController({
         onChange={handleChange}
         onBlur={handleBlur}
         value={value || localValue}
+        integerOnly={integerOnly}
         {...rest}
       />
       <button className={classNameButton} onClick={increaseQuantity}>

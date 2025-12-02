@@ -1,7 +1,7 @@
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { adminProductApi, UpdateProductForm } from 'src/apis/admin.api'
 import CustomReachDialog from 'src/components/CustomReachDialog'
 import LoadingSection from 'src/components/LoadingSection'
@@ -21,18 +21,24 @@ export default function AdminEventProductCard({ product, handleRemove, isAddingP
   const isDiscounted = product.price < product.original_price
 
   const [updatingPrice, setUpdatingPrice] = useState(false)
-  const [newPrice, setNewPrice] = useState<number>(product.price)
+  const [newPrice, setNewPrice] = useState<string>(product.price.toString())
   const [errorMessage, setErrorMessage] = useState<string>('')
 
   const [dialog, setDialog] = useState(false)
   const [excuting, setExcuting] = useState(false)
   const [updateError, setUpdateError] = useState(false)
 
+  useEffect(() => {
+    if (!updatingPrice) {
+      setNewPrice(product.price.toString())
+    }
+  }, [product.price, updatingPrice])
+
   //! Handle input
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value
-    if (newValue === '' || /^\d+$/.test(newValue)) {
-      setNewPrice(Number(newValue))
+    if (newValue === '' || /^\d+(\.\d*)?$/.test(newValue)) {
+      setNewPrice(newValue)
     }
   }
 
@@ -44,7 +50,8 @@ export default function AdminEventProductCard({ product, handleRemove, isAddingP
     setErrorMessage('')
     setDialog(true)
     setExcuting(true)
-    if (newPrice > product.original_price) {
+    const parsedNewPrice = Number(newPrice || 0)
+    if (parsedNewPrice > product.original_price) {
       setExcuting(false)
       setUpdateError(true)
       setErrorMessage('Giá khuyến mãi lớn hơn giá gốc')
@@ -52,7 +59,7 @@ export default function AdminEventProductCard({ product, handleRemove, isAddingP
     }
     const body: UpdateProductForm = {
       id: product.id,
-      price: newPrice
+      price: parsedNewPrice
     }
     updateProductMutation.mutate(body, {
       onSettled: () => {
@@ -66,6 +73,7 @@ export default function AdminEventProductCard({ product, handleRemove, isAddingP
         queryClient.invalidateQueries({ queryKey: ['wishlist'] })
       },
       onError: (error) => {
+        setUpdateError(true)
         if (isAxiosBadRequestError<ErrorRespone>(error)) {
           const formError = error.response?.data
           if (formError) {
@@ -143,7 +151,7 @@ export default function AdminEventProductCard({ product, handleRemove, isAddingP
             <Fragment>
               <button
                 onClick={() => {
-                  setNewPrice(product.price)
+                  setNewPrice(product.price.toString())
                   setUpdatingPrice(false)
                 }}
                 className='rounded-xl border border-white/60 px-2 py-1 text-sm'

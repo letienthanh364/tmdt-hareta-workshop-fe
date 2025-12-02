@@ -139,6 +139,7 @@ export default function AdminProductCreateForm() {
                 })}
                 errorClassName='hidden'
                 autoComplete='false'
+                integerOnly
                 {...field}
                 onChange={field.onChange}
               />

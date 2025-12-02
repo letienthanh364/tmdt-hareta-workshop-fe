@@ -170,6 +170,7 @@ export default function AdminOrderDetail() {
                           )}
                           errorClassName='hidden'
                           autoComplete='false'
+                          integerOnly
                           {...field}
                           onChange={field.onChange}
                         />

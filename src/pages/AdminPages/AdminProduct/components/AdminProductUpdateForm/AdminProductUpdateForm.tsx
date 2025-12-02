@@ -105,6 +105,8 @@ export default function AdminProductUpdateForm({ productDetail }: Props) {
     }
   ]
 
+  const integerFieldNames: Set<InputNameType> = new Set(['quantity', 'discount', 'tag', 'like_count', 'sold'])
+
   const numberFields: InputField[] = [
     {
       error: errors.quantity,
@@ -222,6 +224,7 @@ export default function AdminProductUpdateForm({ productDetail }: Props) {
                   })}
                   errorClassName='hidden'
                   autoComplete='false'
+                  integerOnly={integerFieldNames.has(inputField.name as InputNameType)}
                   {...field}
                   onChange={field.onChange}
                 />
