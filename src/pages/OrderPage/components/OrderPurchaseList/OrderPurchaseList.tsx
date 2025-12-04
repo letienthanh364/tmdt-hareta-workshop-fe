@@ -37,7 +37,7 @@ export default function OrderPurchaseList({ purchaseList }: Props) {
                     {formatCurrency(purchase.item.original_price)}
                   </span>
                   {isDiscounted && <span className=''>{formatCurrency(purchase.item.price)}</span>}
-                  <span classNa me=''>VND</span>
+                  <span className=''>VND</span>
                 </p>
                 <p className='text-sm desktopLarge:text-base'>x {purchase.quantity}</p>
               </div>
