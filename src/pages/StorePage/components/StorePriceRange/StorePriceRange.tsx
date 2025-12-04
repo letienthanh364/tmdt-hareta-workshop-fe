@@ -155,7 +155,7 @@ export default function StorePriceRange() {
           <div className='flex items-center'>
             <input
               className='w-full rounded-md bg-white p-1 text-center text-xs capitalize text-darkText outline outline-1 outline-black/40 duration-200 focus:shadow-sm dark:bg-black dark:text-lightText dark:outline-white/40 tabletSmall:text-sm desktop:w-14 desktop:text-sm desktopLarge:w-20'
-              placeholder={`$ ${t('aside filter.from')}`}
+              placeholder={`${t('aside filter.from')} VND`}
               value={lowerPrice}
               {...register('lower_price')}
               onChange={handleChangeLowerPrice}
@@ -167,7 +167,7 @@ export default function StorePriceRange() {
           <div className='flex items-center'>
             <input
               className='w-full rounded-md bg-white p-1 text-center text-xs capitalize text-darkText outline outline-1 outline-black/40 duration-200 focus:shadow-sm dark:bg-black dark:text-lightText dark:outline-white/40 tabletSmall:text-sm desktop:w-14 desktop:text-sm desktopLarge:w-20'
-              placeholder={`$ ${t('aside filter.to')}`}
+              placeholder={`${t('aside filter.to')} VND`}
               value={upperPrice}
               {...register('upper_price')}
               onChange={handleChangeUpperPrice}

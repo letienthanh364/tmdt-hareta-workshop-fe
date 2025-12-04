@@ -2,6 +2,7 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import { Purchase } from 'src/types/cart.type'
+import { formatCurrency } from 'src/utils/utils'
 
 interface Props {
   purchase: Purchase
@@ -47,7 +48,7 @@ export default function OrderTrackingPurchaseCard({ purchase }: Props) {
         </div>
 
         <div className='w-full text-sm font-semibold text-haretaColor mobileLarge:text-base tabletLarge:text-lg desktop:text-xl'>
-          ${purchase.item.price * purchase.quantity}
+          {formatCurrency(purchase.item.price * purchase.quantity)} VND
         </div>
       </div>
     </div>

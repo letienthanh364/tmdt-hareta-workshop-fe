@@ -161,29 +161,6 @@ function ProductCard({ product, initialLoading, disableClick = false }: Props) {
       <div className='relative w-full overflow-hidden rounded-xl bg-productLightBg pb-4 duration-200 dark:bg-productDarkBg'>
         <div className='relative w-full pt-[75%]'>
           <div className='absolute left-0 top-0 h-full w-full'>
-            {/* {hoveringImage ? (
-              <Fragment>
-                <ProductImageSlideShow
-                  imageList={imageListCarousel}
-                  avatarUrl={avatarUrl}
-                  isLoading={isLoading}
-                  hovering={hoveringImage}
-                />
-                <button
-                  className='absolute inset-0'
-                  onMouseDown={handleMouseDown}
-                  onMouseUp={handleMouseUp}
-                  onMouseMove={handleMouseMove}
-                  onClick={handleClick}
-                ></button>
-              </Fragment>
-            ) : avatarUrl ? (
-              <img src={avatarUrl} alt={product.name} className='absolute left-0 top-0 h-full w-full object-cover' />
-            ) : (
-              <div className='absolute left-0 top-0 flex h-full w-full items-center justify-center'>
-                <FontAwesomeIcon icon={faTriangleExclamation} fontSize={60} />
-              </div>
-            )} */}
             <Fragment>
               <ProductImageSlideShow
                 imageList={imageListCarousel}
@@ -212,23 +189,21 @@ function ProductCard({ product, initialLoading, disableClick = false }: Props) {
             {product.name}
           </button>
 
-          <div className='flex items-center space-x-2'>
+          <div className='flex items-center space-x-1 '>
             <span
-              className={classNames(
-                'text-xs font-semibold tabletSmall:text-sm desktop:text-base desktopLarge:text-lg',
-                {
-                  'line-through opacity-60': isDiscounted,
-                  'text-haretaColor dark:text-haretaColor': !isDiscounted
-                }
-              )}
+              className={classNames('text-xs tabletSmall:text-sm desktop:text-base desktopLarge:text-lg', {
+                'line-through opacity-40': isDiscounted,
+                'font-semibold text-haretaColor': !isDiscounted
+              })}
             >
-              ${formatCurrency(product.original_price)}
+              {formatCurrency(product.original_price)}
             </span>
             {isDiscounted && (
               <span className='text-xs font-semibold text-haretaColor tabletSmall:text-sm desktop:text-base desktopLarge:text-lg'>
-                ${formatCurrency(product.price)}
+                {formatCurrency(product.price)}
               </span>
             )}
+            <span className='font-semibold text-haretaColor'>VND</span>
           </div>
         </div>
         {product.tag !== 0 && (

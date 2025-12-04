@@ -18,7 +18,7 @@ export function isAxiosUnprocessableError(error: unknown) {
 }
 
 export function formatCurrency(currency: number) {
-  return new Intl.NumberFormat('de-DE').format(currency)
+  return new Intl.NumberFormat('en-US').format(currency)
 }
 
 export const removeSpecialCharacter = (str: string) =>

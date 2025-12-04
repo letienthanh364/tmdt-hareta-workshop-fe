@@ -3,6 +3,28 @@ import { InputHTMLAttributes, forwardRef, useEffect, useRef, useState } from 're
 const INTEGER_REGEX = /^\d*$/
 const DECIMAL_REGEX = /^\d*(\.\d*)?$/
 
+const stripGroupSeparator = (value: string) => value.replace(/,/g, '')
+
+const formatWithGroupSeparator = (value: string, integerOnly: boolean) => {
+  if (!value) return ''
+  const [integerPart, decimalPart] = value.split('.')
+  const formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+
+  if (integerOnly) {
+    return formattedInteger
+  }
+
+  if (decimalPart === undefined) {
+    return formattedInteger
+  }
+
+  if (value.endsWith('.')) {
+    return `${formattedInteger}.`
+  }
+
+  return `${formattedInteger}.${decimalPart}`
+}
+
 const toInputString = (value: InputNumberProps['value']) => {
   if (value === undefined || value === null) return ''
   if (typeof value === 'number') {
@@ -34,7 +56,9 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function Inpu
   },
   ref
 ) {
-  const [localValue, setLocalValue] = useState<string>(() => toInputString(valueProp))
+  const [localValue, setLocalValue] = useState<string>(() =>
+    formatWithGroupSeparator(stripGroupSeparator(toInputString(valueProp)), integerOnly)
+  )
   const skipSyncRef = useRef(false)
 
   useEffect(() => {
@@ -42,15 +66,20 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function Inpu
       skipSyncRef.current = false
       return
     }
-    setLocalValue(toInputString(valueProp))
-  }, [valueProp])
+    setLocalValue(formatWithGroupSeparator(stripGroupSeparator(toInputString(valueProp)), integerOnly))
+  }, [valueProp, integerOnly])
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target
+    const sanitizedValue = stripGroupSeparator(event.target.value)
     const regex = integerOnly ? INTEGER_REGEX : DECIMAL_REGEX
-    if (regex.test(value) || value === '') {
-      setLocalValue(value)
+    if (regex.test(sanitizedValue) || sanitizedValue === '') {
+      const formattedValue = formatWithGroupSeparator(sanitizedValue, integerOnly)
+      setLocalValue(formattedValue)
       skipSyncRef.current = true
-      onChange && onChange(event)
+      if (onChange) {
+        event.target.value = sanitizedValue
+        event.currentTarget.value = sanitizedValue
+        onChange(event)
+      }
     }
   }
 

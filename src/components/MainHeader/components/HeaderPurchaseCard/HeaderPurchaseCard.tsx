@@ -18,9 +18,6 @@ export default function HeaderPurchaseCard({ purchase, handleRemove, isDisabled 
   //! Multi languages
   const { t } = useTranslation('header')
 
-  //! Check discount
-  const isDiscounted = purchase.item.price < purchase.item.original_price
-
   return (
     <div
       className='flex items-center border-t border-black/40 p-3 first:border-none hover:bg-lightColor700/60 dark:border-white/40 dark:hover:bg-darkColor700/60'
@@ -52,18 +49,8 @@ export default function HeaderPurchaseCard({ purchase, handleRemove, isDisabled 
               {purchase.item.name}
             </p>
           </NavLink>
-          <div className='flex space-x-2 font-medium'>
-            <span
-              className={classNames('flex-shrink-0', {
-                ' text-haretaColor': !isDiscounted,
-                'line-through opacity-60': isDiscounted
-              })}
-            >
-              ${formatCurrency(purchase.item.original_price)}
-            </span>
-            {isDiscounted && (
-              <span className='flex-shrink-0 text-haretaColor'>${formatCurrency(purchase.item.price)}</span>
-            )}
+          <div className='flex flex-col items-end text-sm font-medium'>
+            <span className='flex-shrink-0 text-haretaColor'>{formatCurrency(purchase.item.price)} VND</span>
           </div>
         </div>
         <div className='flex justify-between'>

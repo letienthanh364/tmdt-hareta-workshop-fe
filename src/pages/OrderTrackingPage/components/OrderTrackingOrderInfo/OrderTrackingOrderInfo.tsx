@@ -63,18 +63,20 @@ export default function OrderTrackingOrderInfo({ orderDetail, totalOriginalPrice
           <div className='flex flex-col space-y-2'>
             <div className={wrapperClassname}>
               <p className={titleClassname}>{t('order information.Total')}</p>
-              <p className={classNames(infoClassname)}>${formatCurrency(totalOriginalPrice)}</p>
+              <p className={classNames(infoClassname)}>{formatCurrency(totalOriginalPrice)} VND</p>
             </div>
 
             <div className={wrapperClassname}>
               <p className={titleClassname}>{t('order information.Discount')}</p>
-              <p className={classNames(infoClassname)}>${formatCurrency(totalOriginalPrice - orderDetail.total)}</p>
+              <p className={classNames(infoClassname)}>{formatCurrency(totalOriginalPrice - orderDetail.total)} VND</p>
             </div>
           </div>
 
           <div className={classNames(wrapperClassname, 'text border-spacing-6 border-t border-dashed pt-6 ')}>
             <p className={classNames(titleClassname, 'font-semibold')}>{t('order information.Total payment')}</p>
-            <p className={classNames(infoClassname, ' font-semibold text-haretaColor')}>${orderDetail.total}</p>
+            <p className={classNames(infoClassname, ' font-semibold text-haretaColor')}>
+              {formatCurrency(orderDetail.total)} VND
+            </p>
           </div>
         </div>
       </div>

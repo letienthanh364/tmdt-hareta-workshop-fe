@@ -115,15 +115,17 @@ export default function CartDesktopPurchaseCard({ purchase, index, handleCheckin
         </div>
       </div>
       <div className='col-span-1'>
-        <div className='flex items-center justify-center space-x-2'>
+        <div className='flex items-center justify-center space-x-1'>
           <p
             className={classNames('text-darkText dark:text-lightText', {
-              'line-through opacity-80': isDiscounted
+              'line-through opacity-50': isDiscounted
             })}
           >
-            ${formatCurrency(purchase.item.original_price)}
+            {formatCurrency(purchase.item.original_price)}
           </p>
-          {isDiscounted && <p className='text-darkText dark:text-lightText'>${formatCurrency(purchase.item.price)}</p>}
+          {isDiscounted && <p className='text-darkText dark:text-lightText'>{formatCurrency(purchase.item.price)}</p>}
+
+          <span className=''>VND</span>
         </div>
       </div>
 
@@ -156,7 +158,7 @@ export default function CartDesktopPurchaseCard({ purchase, index, handleCheckin
 
       <div className='col-span-1'>
         <span className='text-haretaColor'>
-          ${formatCurrency(purchase.item.price * purchase.quantity * ((100 - purchase.discount) / 100))}
+          {formatCurrency(purchase.item.price * purchase.quantity * ((100 - purchase.discount) / 100))} VND
         </span>
       </div>
 

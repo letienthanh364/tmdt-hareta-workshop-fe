@@ -42,13 +42,14 @@ export default function EventProductCard({ product }: Props) {
             <span className='font-normal opacity-60'>({product.color})</span>
           </p>
 
-          <div className='flex space-x-2'>
-            <span className='text-xs font-semibold line-through opacity-60 tabletSmall:text-sm desktop:text-base desktopLarge:text-lg'>
-              ${formatCurrency(product.original_price)}
+          <div className='flex items-center space-x-1 font-semibold'>
+            <span className='text-xs line-through opacity-50   tabletSmall:text-sm desktop:text-base desktopLarge:text-lg'>
+              {formatCurrency(product.original_price)}
             </span>
-            <span className='text-xs font-semibold text-haretaColor tabletSmall:text-sm desktop:text-base desktopLarge:text-lg'>
-              ${formatCurrency(product.price)}
+            <span className='text-xs font-semibold  text-haretaColor tabletSmall:text-sm desktop:text-base desktopLarge:text-lg'>
+              {formatCurrency(product.price)}
             </span>
+            <span className='font-semibold text-haretaColor '>VND</span>
           </div>
         </div>
         {product.tag !== 0 && (

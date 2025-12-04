@@ -24,7 +24,7 @@ export default function EventCard({ event }: Props) {
           className='absolute left-0 top-0 h-full w-full object-cover'
           draggable={false}
         />
-        <p className='absolute bottom-4 left-1/2 line-clamp-2 w-11/12 -translate-x-1/2 overflow-hidden text-pretty rounded-full bg-black/80 px-8 py-1  text-left text-lg font-semibold tracking-wide tablet:text-xl desktop:bottom-8 desktop:w-1/2 desktop:text-2xl'>
+        <p className='absolute bottom-4 left-1/2 line-clamp-2 w-11/12 -translate-x-1/2 overflow-hidden text-pretty rounded-full bg-white/80 px-8 py-1 text-left  text-lg font-semibold tracking-wide dark:bg-black/80 tablet:text-xl desktop:bottom-8 desktop:w-1/2 desktop:text-2xl'>
           {event.overall_content}
         </p>
       </div>

@@ -110,7 +110,7 @@ export default function CartDesktopForGuest(props: Props) {
             {t('content.total')}:
           </div>
           <span className='col-span-1 text-center text-base font-medium text-haretaColor dark:text-haretaColor desktop:text-lg'>
-            ${formatCurrency(totalCheckedPurchasesPrice)}
+            {formatCurrency(totalCheckedPurchasesPrice)} VND
           </span>
           {checkedPurchasesCount === 0 && (
             <div className='col-span-1 flex h-10 cursor-not-allowed items-center justify-center truncate rounded-md border-none bg-haretaColor text-sm font-medium text-black opacity-40 desktop:text-base'>

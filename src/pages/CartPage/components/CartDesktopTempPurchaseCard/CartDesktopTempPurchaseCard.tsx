@@ -74,6 +74,7 @@ export default function CartDesktopTempPurchaseCard(props: Props) {
             {isDiscounted && (
               <p className='text-darkText dark:text-lightText'>${formatCurrency(purchase.item.price)}</p>
             )}
+            <span className=''>VND</span>
           </div>
         </div>
 
@@ -98,7 +99,7 @@ export default function CartDesktopTempPurchaseCard(props: Props) {
 
         <div className='col-span-1'>
           <span className='text-haretaColor'>
-            ${formatCurrency(purchase.item.price * purchase.quantity * ((100 - purchase.discount) / 100))}
+            {formatCurrency(purchase.item.price * purchase.quantity * ((100 - purchase.discount) / 100))} VND
           </span>
         </div>
 

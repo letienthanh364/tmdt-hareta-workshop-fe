@@ -102,20 +102,17 @@ export default function ProductDetailDesktop(props: Props) {
             )}
           </div>
           <div className='mt-2'>{tag !== 0 && <ProductTag tag={tag} />}</div>
-          <div className='mt-2 flex space-x-2'>
+          <div className='mt-2 flex items-center space-x-1 desktop:text-lg desktopLarge:text-xl'>
             <span
-              className={classNames('text-base font-medium  desktop:text-lg desktopLarge:text-xl', {
-                'line-through opacity-60': isSaleOff,
-                'text-haretaColor': !isSaleOff
+              className={classNames('', {
+                'line-through opacity-50': isSaleOff,
+                'font-medium text-haretaColor': !isSaleOff
               })}
             >
-              ${formatCurrency(defaultProduct.original_price)}
+              {formatCurrency(defaultProduct.original_price)}
             </span>
-            {isSaleOff && (
-              <span className='text-base font-medium text-haretaColor desktop:text-lg desktopLarge:text-xl'>
-                ${formatCurrency(defaultProduct.price)}
-              </span>
-            )}
+            {isSaleOff && <span className='font-medium text-haretaColor'>{formatCurrency(defaultProduct.price)}</span>}
+            <span className='font-medium text-haretaColor'>VND</span>
           </div>
 
           <ProductDetailVariantList

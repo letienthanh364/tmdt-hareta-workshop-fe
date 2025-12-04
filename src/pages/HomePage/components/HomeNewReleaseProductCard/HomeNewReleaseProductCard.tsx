@@ -111,18 +111,21 @@ export default function HomeNewReleaseProductCard({ product }: Props) {
                 {product.name}
               </p>
 
-              <div className='flex w-full justify-center space-x-4 font-semibold tablet:text-xl desktop:text-2xl'>
+              <div className='flex w-full justify-center space-x-1 tablet:text-xl desktop:text-2xl'>
                 <span
                   className={classNames('', {
-                    'text-haretaColor dark:text-haretaColor': !isDiscounted,
-                    'line-through opacity-60': isDiscounted
+                    'font-semibold text-haretaColor  dark:text-haretaColor ': !isDiscounted,
+                    'line-through opacity-50': isDiscounted
                   })}
                 >
-                  ${formatCurrency(product.original_price)}
+                  {formatCurrency(product.original_price)}
                 </span>
                 {isDiscounted && (
-                  <span className='text-haretaColor dark:text-haretaColor'>${formatCurrency(product.price)}</span>
+                  <span className='font-semibold text-haretaColor  dark:text-haretaColor '>
+                    ${formatCurrency(product.price)}
+                  </span>
                 )}
+                <span className='font-semibold  text-haretaColor'>VND</span>
               </div>
 
               <div className=' grid grid-cols-3 gap-2 tablet:flex tablet:justify-center '>
