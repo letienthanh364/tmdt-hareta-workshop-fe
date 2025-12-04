@@ -30,6 +30,8 @@
     "confirm new password": "Nhập lại mật khẩu mới",
     "cancel": "Hủy bỏ",
     "change password": "Đổi mật khẩu",
+    "old password invalid": "Mật khẩu hiện tại không đúng",
+    "passwords do not match": "Mật khẩu không khớp",
     "message": "Đổi mật khẩu thành công!",
     "go to login": "Đi tới đăng nhập"
   },

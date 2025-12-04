@@ -15,6 +15,7 @@ import { faArrowLeft, faLock } from '@fortawesome/free-solid-svg-icons'
 import passwordRecovery from 'src/apis/passwordRecovery.api'
 import AnimateTransition from 'src/components/AnimateTransition'
 import LoadingSection from 'src/components/LoadingSection'
+import { useTranslation } from 'react-i18next'
 
 type FormData = PasswordRecoverySchema
 
@@ -28,6 +29,8 @@ export default function AuthPasswordRecovery() {
   } = useForm<FormData>({
     resolver: yupResolver(passwordRecoverySchema)
   })
+
+  const { t } = useTranslation('login')
 
   const navigate = useNavigate()
   const { slug } = useParams()
@@ -101,9 +104,9 @@ export default function AuthPasswordRecovery() {
                         className='hidden pr-4 text-vintageColor/80 opacity-70 duration-200 hover:opacity-100 dark:text-haretaColor tablet:block'
                       />
                     </Link>
-                    <div className='py-1 text-center text-2xl uppercase text-vintageColor dark:text-haretaColor'>
-                      Password Recovery
-                    </div>
+                  <div className='py-1 text-center text-2xl uppercase text-vintageColor dark:text-haretaColor'>
+                    {t('password.password recovery')}
+                  </div>
                   </div>
                   <div className='mt-4 flex flex-col items-center'>
                     <div className='flex items-center'>
@@ -119,7 +122,7 @@ export default function AuthPasswordRecovery() {
                         </>
                       </svg>
                       <div className='ml-2 text-center text-lg font-semibold text-black dark:text-textVintage/80'>
-                        Your email:
+                        {t('password.Your email')}
                       </div>
                     </div>
                     <div className='ml-3 w-full truncate text-center text-sm text-blue-700 dark:text-blue-400 tabletSmall:text-xl'>
@@ -132,7 +135,7 @@ export default function AuthPasswordRecovery() {
                     type='password'
                     className='mt-8 autofill:bg-red-400 autofill:text-darkText autofill:dark:text-lightText'
                     errorMessage={errors.new_password?.message}
-                    labelName='New Password'
+                    labelName={t('password.New Password')}
                     required
                     isPasswordInput
                     autoComplete='on'
@@ -144,7 +147,7 @@ export default function AuthPasswordRecovery() {
                     type='password'
                     className='mt-8 autofill:bg-red-400 autofill:text-darkText autofill:dark:text-lightText'
                     errorMessage={errors.confirm_new_password?.message}
-                    labelName='Confirm New Password'
+                    labelName={t('password.Confirm New Password')}
                     required
                     isPasswordInput
                     autoComplete='on'
@@ -157,14 +160,14 @@ export default function AuthPasswordRecovery() {
                       isLoading={AuthPasswordRecoveryMutation.isPending}
                       disabled={AuthPasswordRecoveryMutation.isPending}
                     >
-                      Change
+                      {t('password.Change')}
                     </Button>
                   </div>
 
                   <div className='mt-3 flex justify-center text-sm tablet:hidden'>
-                    <p className='text-gray-400'>Go back to</p>
+                    <p className='text-gray-400'>{t('password.Go back to')}</p>
                     <Link to={mainPath.login} className='ml-1 text-brownColor dark:text-haretaColor'>
-                      Login
+                      {t('login.login')}
                     </Link>
                   </div>
                 </form>

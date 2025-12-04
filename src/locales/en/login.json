@@ -30,7 +30,11 @@
     "Go back to": "Go back to",
     "Wait for": "Wait for",
     "second": "second",
-    "seconds": "seconds"
+    "seconds": "seconds",
+    "Your email": "Your email:",
+    "New Password": "New password",
+    "Confirm New Password": "Confirm new password",
+    "Change": "Change"
   },
   "dialog": {
     "Undefined error": "Undefined error",

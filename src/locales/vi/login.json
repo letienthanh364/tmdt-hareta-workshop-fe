@@ -23,6 +23,19 @@
     "Phone number": "Số điện thoại",
     "Already have an account?": "Đã có tài khoản?"
   },
+  "password": {
+    "password recovery": "Lấy lại mật khẩu",
+    "Email address": "Địa chỉ email",
+    "Send": "Gửi",
+    "Go back to": "Quay lại",
+    "Wait for": "Vui lòng chờ",
+    "second": "giây",
+    "seconds": "giây",
+    "Your email": "Email của bạn:",
+    "New Password": "Mật khẩu mới",
+    "Confirm New Password": "Nhập lại mật khẩu mới",
+    "Change": "Đổi mật khẩu"
+  },
   "dialog": {
     "Undefined error": "Lỗi không xác định",
     "Please try again": "Vui lòng thử lại",

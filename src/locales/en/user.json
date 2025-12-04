@@ -30,6 +30,8 @@
     "confirm new password": "confirm new password",
     "cancel": "Cancel",
     "change password": "Change password",
+    "old password invalid": "Your password is incorrect",
+    "passwords do not match": "Passwords do not match",
     "message": "Password changed successfully!",
     "go to login": "Go to login"
   },

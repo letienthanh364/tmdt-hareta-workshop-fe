@@ -57,13 +57,13 @@ export default function UserChangePassword() {
           const errorKey = formError.error_key
           if (errorKey === 'ErrOldPasswordIsInvalid') {
             setError('old_password', {
-              message: 'Your password is incorrect',
+              message: t('password.old password invalid'),
               type: 'Server'
             })
           }
           if (errorKey === 'ErrNewPasswordIsInvalid') {
             setError('confirm_new_password', {
-              message: 'Passwords do not match',
+              message: t('password.passwords do not match'),
               type: 'Server'
             })
           }
