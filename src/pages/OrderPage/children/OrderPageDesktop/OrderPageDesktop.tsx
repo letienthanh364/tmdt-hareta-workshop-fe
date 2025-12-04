@@ -31,19 +31,21 @@ export default function OrderPageDesktop({ purchaseList, totalPrice, totalDiscou
         {purchaseList.map((purchase, index) => (
           <div key={purchase.id} className='grid grid-cols-8 gap-2 py-2 desktop:gap-4 desktop:py-4'>
             <div className={classNames('col-span-3', infoStyle)}>{purchase.item.name}</div>
-            <div className={classNames('col-span-1', infoStyle)}>${purchase.item.original_price}</div>
+            <div className={classNames('col-span-1', infoStyle)}>
+              {formatCurrency(purchase.item.original_price)} VND
+            </div>
             <div className={classNames('col-span-1 font-semibold', infoStyle)}>{purchase.quantity}</div>
             <div className={classNames('col-span-1', infoStyle)}>
-              ${formatCurrency(purchase.quantity * purchase.item.original_price)}
+              {formatCurrency(purchase.quantity * purchase.item.original_price)} VND
             </div>
             <div className={classNames('col-span-1', infoStyle)}>
-              $
               {formatCurrency(
                 purchase.quantity * purchase.item.original_price - purchase.quantity * purchase.item.price
-              )}
+              )}{' '}
+              VND
             </div>
             <div className={classNames('col-span-1 font-semibold text-haretaColor', infoStyle)}>
-              ${formatCurrency(purchase.quantity * purchase.item.price)}
+              {formatCurrency(purchase.quantity * purchase.item.price)} VND
             </div>
 
             {index != purchaseList.length - 1 && (
@@ -58,10 +60,12 @@ export default function OrderPageDesktop({ purchaseList, totalPrice, totalDiscou
       <div className='grid grid-cols-8 gap-2 tablet:text-lg desktop:gap-4 desktop:text-2xl'>
         <div className={classNames('col-span-5 text-center')}>{t('bill.Total')}</div>
 
-        <div className={classNames('col-span-1 text-center')}>${totalPrice}</div>
-        <div className={classNames('col-span-1 text-center')}>${totalPrice - totalDiscountedPrice}</div>
+        <div className={classNames('col-span-1 text-center')}>{formatCurrency(totalPrice)} VND</div>
+        <div className={classNames('col-span-1 text-center')}>
+          {formatCurrency(totalPrice - totalDiscountedPrice)} VND
+        </div>
         <div className={classNames('col-span-1 text-center font-semibold text-haretaColor')}>
-          ${totalDiscountedPrice}
+          {formatCurrency(totalDiscountedPrice)} VND
         </div>
       </div>
 

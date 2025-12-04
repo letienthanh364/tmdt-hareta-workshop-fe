@@ -34,9 +34,10 @@ export default function OrderPurchaseList({ purchaseList }: Props) {
               <div className='col-span-1 text-right'>
                 <p className='flex justify-end space-x-2 text-base font-medium desktopLarge:text-lg'>
                   <span className={classNames('', { 'line-through opacity-60': isDiscounted })}>
-                    ${purchase.item.original_price}
+                    {formatCurrency(purchase.item.original_price)}
                   </span>
-                  {isDiscounted && <span className=''>${purchase.item.price}</span>}
+                  {isDiscounted && <span className=''>{formatCurrency(purchase.item.price)}</span>}
+                  <span classNa me=''>VND</span>
                 </p>
                 <p className='text-sm desktopLarge:text-base'>x {purchase.quantity}</p>
               </div>
@@ -52,13 +53,13 @@ export default function OrderPurchaseList({ purchaseList }: Props) {
         <div className='grid grid-cols-3 gap-2'>
           <div className='col-span-2 text-darkText/80 dark:text-lightText/80'>{t('layout.Total')}</div>
           <div className='col-span-1 text-right text-haretaColor dark:text-haretaColor'>
-            ${formatCurrency(totalPrice)}
+            {formatCurrency(totalPrice)} VND
           </div>
         </div>
         <div className='grid grid-cols-3 gap-2'>
           <div className='col-span-2 text-darkText/80 dark:text-lightText/80'>{t('layout.Discount')}</div>
           <div className='col-span-1 text-right text-haretaColor dark:text-haretaColor'>
-            ${formatCurrency(totalPrice - totalDiscountedPrice)}
+            {formatCurrency(totalPrice - totalDiscountedPrice)} VND
           </div>
         </div>
       </div>
@@ -66,7 +67,7 @@ export default function OrderPurchaseList({ purchaseList }: Props) {
       <div className='grid grid-cols-3 gap-2 text-xl font-bold uppercase desktopLarge:text-2xl'>
         <div className='col-span-2 text-darkText/80 dark:text-lightText/80'>{t('layout.Bill')}</div>
         <div className='col-span-1 text-right text-haretaColor dark:text-haretaColor'>
-          ${formatCurrency(totalDiscountedPrice)}
+          {formatCurrency(totalDiscountedPrice)} VND
         </div>
       </div>
     </Fragment>
