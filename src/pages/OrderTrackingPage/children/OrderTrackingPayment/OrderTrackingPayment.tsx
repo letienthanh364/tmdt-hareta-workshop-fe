@@ -1,13 +1,17 @@
-import { useQuery } from '@tanstack/react-query'
-import { useContext } from 'react'
+import { useMutation, useQuery } from '@tanstack/react-query'
+import { useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { orderApi } from 'src/apis/order.api'
+import paymentApi from 'src/apis/payment.api'
 import LoadingSection from 'src/components/LoadingSection'
 import PathBar from 'src/components/PathBar'
 import { orderTrackingPath } from 'src/constants/path'
+import { HttpStatusMessage } from 'src/constants/httpStatusMessage'
 import { AppContext } from 'src/contexts/app.context'
 import { getOrderIdInOrderTrackingPayment } from 'src/utils/order'
+import { isAxiosBadRequestError } from 'src/utils/utils'
+import { ErrorRespone } from 'src/types/utils.type'
 
 function DividingBorder() {
   return (
@@ -39,6 +43,35 @@ export default function OrderTrackingPayment() {
 
   //! Multi languages
   const { t } = useTranslation('support')
+  const [stripeCheckoutError, setStripeCheckoutError] = useState('')
+
+  const createStripeCheckoutMutation = useMutation({
+    mutationFn: () => paymentApi.createCheckoutSession({ order_id: orderId }, { isGuest: !isAuthenticated }),
+    onSuccess: (response) => {
+      const checkoutUrl = response.data.data.checkout_url
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl
+        return
+      }
+      setStripeCheckoutError(t('Order payment.Unable to start Stripe checkout'))
+    },
+    onError: (error) => {
+      let errMsg = ''
+      if (isAxiosBadRequestError<ErrorRespone>(error)) {
+        const formError = error.response?.data
+        if (formError) {
+          errMsg = HttpStatusMessage.get(formError.error_key) || ''
+        }
+      }
+      setStripeCheckoutError(errMsg || t('Order payment.Stripe checkout error'))
+    }
+  })
+
+  const handleStripeCheckout = () => {
+    if (!orderId || createStripeCheckoutMutation.isPending) return
+    setStripeCheckoutError('')
+    createStripeCheckoutMutation.mutate()
+  }
 
   return (
     <div className='bg-lightBg py-2 duration-200 dark:bg-darkBg tablet:py-3 desktopLarge:py-4'>
@@ -100,6 +133,24 @@ export default function OrderTrackingPayment() {
                 <span className='col-span-2 font-medium text-haretaColor'>${orderDetail.total}</span>
               </div>
             </div>
+          </div>
+
+          <DividingBorder />
+
+          <div className='flex w-full flex-col items-center justify-center space-y-3 text-center'>
+            <p className='text-base font-medium tablet:text-lg'>
+              {t('Order payment.Have you not yet completed the payment?')}
+            </p>
+            <button
+              disabled={createStripeCheckoutMutation.isPending}
+              onClick={handleStripeCheckout}
+              className='w-full rounded-2xl bg-haretaColor px-6 py-3 font-semibold text-darkText transition hover:bg-primaryColor disabled:cursor-not-allowed disabled:opacity-60 tablet:w-auto'
+            >
+              {createStripeCheckoutMutation.isPending
+                ? t('Order payment.Redirecting to Stripe...')
+                : t('Order payment.Pay with Stripe')}
+            </button>
+            {stripeCheckoutError && <p className='text-sm font-medium text-red-500'>{stripeCheckoutError}</p>}
           </div>
 
           <DividingBorder />

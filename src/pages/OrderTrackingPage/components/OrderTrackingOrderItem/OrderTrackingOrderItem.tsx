@@ -52,6 +52,11 @@ export default function OrderTrackingOrderItem({ order }: Props) {
   const remain = isMobile ? (totalPurchases > 1 ? totalPurchases - 1 : 0) : totalPurchases > 3 ? totalPurchases - 3 : 0
   const diplayedProducts = isMobile ? productList.splice(0, 1) : productList.splice(0, 3)
 
+  //! Handle status
+  const orderStatus = order.status
+  const paymentStatus = order.payment_status
+  const finalStatus = orderStatus === 0 ? orderStatus + paymentStatus : orderStatus
+
   //! HANDLE ENTER ITEM
   const navigate = useNavigate()
   const handleClickItem = () => {
@@ -142,7 +147,7 @@ export default function OrderTrackingOrderItem({ order }: Props) {
                   isMobile ? infoClassname : 'col-span-1 flex min-h-full items-center justify-center font-semibold'
                 )}
               >
-                {OrderStates[order.status]}
+                {OrderStates[finalStatus]}
               </span>
             </div>
           </div>

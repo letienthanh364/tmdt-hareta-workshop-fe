@@ -6,6 +6,7 @@ export interface Order extends JSONModel {
   email: string
   address: string
   total: number
+  payment_status: number
 }
 
 export interface OrderList {

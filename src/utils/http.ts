@@ -8,8 +8,8 @@ import { HttpResponseLogs } from 'src/constants/httpResponseLog'
 import { HttpStatusMessage } from 'src/constants/httpStatusMessage'
 import { t } from 'i18next'
 
-export const ApiURL = 'https://api.haretaworkshop.com/'
-// export const ApiURL = 'http://localhost:3000/'
+// export const ApiURL = 'https://api.haretaworkshop.com/'
+export const ApiURL = 'http://localhost:3000/'
 
 class Http {
   instance: AxiosInstance

@@ -8,6 +8,8 @@ const CartPage = lazy(() => import('src/pages/CartPage'))
 const PrivacyAndTermsPage = lazy(() => import('src/pages/PrivacyAndTermsPage'))
 const ProductDetailPage = lazy(() => import('src/pages/ProductDetailPage'))
 const StorePage = lazy(() => import('src/pages/StorePage'))
+const CheckoutSuccessPage = lazy(() => import('src/pages/CheckoutResultPage/CheckoutSuccessPage'))
+const CheckoutCancelPage = lazy(() => import('src/pages/CheckoutResultPage/CheckoutCancelPage'))
 
 function MainRouteWrapper() {
   return (
@@ -42,6 +44,14 @@ const MainRoute: RouteObject = {
     {
       path: mainPath.productDetail,
       element: <ProductDetailPage />
+    },
+    {
+      path: mainPath.checkoutSuccess,
+      element: <CheckoutSuccessPage />
+    },
+    {
+      path: mainPath.checkoutCancel,
+      element: <CheckoutCancelPage />
     }
   ]
 }

@@ -63,12 +63,14 @@
     "Please complete transaction in 48 hours to complete your order": "Hãy hoàn tất thanh toán trong vòng 48 giờ để hoàn tất đơn hàng của bạn",
     "Sincerely thanks!": "Chân thành cảm ơn!",
     "Confirm": "Xác nhận",
-    "Go to payment page": "Đi tới trang thanh toán"
+    "Go to payment page": "Đi tới trang thanh toán",
+    "Pay with Stripe": "Thanh toán qua Stripe",
+    "Redirecting to Stripe...": "Đang chuyển đến Stripe...",
+    "Unable to start Stripe checkout": "Không thể tạo phiên thanh toán Stripe"
   },
   "payment": {
-    "At the moment we only accept": "Hiện tại chúng tôi chỉ chấp nhận thanh toán thông qua",
-    "Online payment": "giao dịch trực tuyến",
-    "due to our": "đã được ghi rõ trong",
+    "supportedPaymentsIntro": "Chúng tôi hiện hỗ trợ thanh toán trực tuyến qua Stripe, PayPal hoặc chuyển khoản ngân hàng theo đúng",
+    "stripeRedirectInfo": "Sau khi đặt hàng, nút Stripe sẽ xuất hiện để bạn thanh toán ngay và luôn có sẵn tại Order Tracking khi đơn hàng còn chờ thanh toán.",
     "PLEASE COMPLETE YOUR PAYMENT IN 48 HOURS AFTER PLACING YOUR ORDER": "Hãy thanh toán trong vòng 48 giờ kể từ thời điểm đặt hàng để hoàn tất đơn hàng của bạn",
     "NATIONAL PAYMENT": "Thanh toán nội địa",
     "INTERNATIONAL PAYMENT": "Thanh toán quốc tế",
@@ -76,7 +78,11 @@
     "(PAYPAL)": "(PAYPAL)",
     "or": "hoặc",
     "Any transactions made before placing an order will": "Mọi giao dịch được thực hiện trước khi xác nhận đặt hàng đều",
-    "NOT BE ACCEPTED": "KHÔNG ĐƯỢC CHẤP NHẬN"
+    "NOT BE ACCEPTED": "KHÔNG ĐƯỢC CHẤP NHẬN",
+    "STRIPE PAYMENT": "Thanh toán thẻ",
+    "(STRIPE)": "(Stripe)",
+    "Stripe description 1": "Thanh toán bằng thẻ tín dụng hoặc thẻ ghi nợ thông qua quy trình Stripe an toàn.",
+    "Stripe description 2": "Hãy hoàn tất việc đặt hàng trước, sau đó nhấn nút \"Thanh toán Stripe\" để được chuyển tới trang Stripe."
   },
   "denided order": {
     "Your order was denied due to ": "Đơn hàng của bạn đã bị từ chối vì ",
@@ -104,5 +110,14 @@
   },
   "error": {
     "Something went wrong": "Đã có lỗi xảy ra"
+  },
+  "checkoutResult": {
+    "successTitle": "Thanh toán thành công",
+    "successDescription": "Thanh toán Stripe của bạn đã được xử lý. Bạn có thể theo dõi trạng thái đơn hàng bất cứ lúc nào tại Order Tracking hoặc tiếp tục mua sắm.",
+    "cancelTitle": "Thanh toán bị hủy",
+    "cancelDescription": "Có vẻ bạn đã thoát khỏi trang Stripe trước khi hoàn tất. Đơn hàng vẫn đang chờ thanh toán — quay lại trang đặt hàng để thử lại hoặc tiếp tục xem các sản phẩm khác.",
+    "viewOrders": "Xem trạng thái đơn hàng",
+    "returnToOrders": "Quay lại trang đặt hàng",
+    "backToStore": "Quay lại cửa hàng"
   }
 }

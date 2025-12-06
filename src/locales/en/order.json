@@ -62,12 +62,14 @@
     "Please complete transaction in 48 hours to complete your order": "Please complete transaction in 48 hours to complete your order",
     "Sincerely thanks!": "Sincerely thanks!",
     "Confirm": "Confirm",
-    "Go to payment page": "Go to payment page"
+    "Go to payment page": "Go to payment page",
+    "Pay with Stripe": "Pay with Stripe",
+    "Redirecting to Stripe...": "Redirecting to Stripe...",
+    "Unable to start Stripe checkout": "Unable to start Stripe checkout"
   },
   "payment": {
-    "At the moment we only accept": "At the moment we only accept",
-    "Online payment": "Online payment",
-    "due to our": "due to our",
+    "supportedPaymentsIntro": "We now support secure online payments via Stripe, PayPal, or bank transfer as outlined in our",
+    "stripeRedirectInfo": "After you place your order, a Stripe button will appear so you can complete payment immediately, and it remains available in Order Tracking while the order is awaiting payment.",
     "PLEASE COMPLETE YOUR PAYMENT IN 48 HOURS AFTER PLACING YOUR ORDER": "PLEASE COMPLETE YOUR PAYMENT IN 48 HOURS AFTER PLACING YOUR ORDER",
     "NATIONAL PAYMENT": "NATIONAL PAYMENT",
     "INTERNATIONAL PAYMENT": "INTERNATIONAL PAYMENT",
@@ -75,7 +77,11 @@
     "(PAYPAL)": "(PAYPAL)",
     "or": "OR",
     "Any transactions made before placing an order will": "Any transactions made before placing an order will",
-    "NOT BE ACCEPTED": "NOT BE ACCEPTED"
+    "NOT BE ACCEPTED": "NOT BE ACCEPTED",
+    "STRIPE PAYMENT": "CARD PAYMENT",
+    "(STRIPE)": "(STRIPE)",
+    "Stripe description 1": "Pay with major credit or debit cards through Stripe's secure checkout flow.",
+    "Stripe description 2": "Complete your order first, then click the \"Pay with Stripe\" button to be redirected to the Stripe page."
   },
   "denided order": {
     "Your order was denied due to ": "Your order was denied due to ",
@@ -103,5 +109,14 @@
   },
   "error": {
     "Something went wrong": "Something went wrong"
+  },
+  "checkoutResult": {
+    "successTitle": "Payment completed successfully",
+    "successDescription": "Your Stripe payment has been processed. You can review your order status at any time in Order Tracking or continue exploring our store.",
+    "cancelTitle": "Payment canceled",
+    "cancelDescription": "It looks like you exited the Stripe checkout before finishing payment. Your order is still awaiting payment—return to the order page to try again or keep browsing the store.",
+    "viewOrders": "Go to Order Tracking",
+    "returnToOrders": "Back to Order page",
+    "backToStore": "Back to Store"
   }
 }

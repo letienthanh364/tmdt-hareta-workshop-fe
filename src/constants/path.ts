@@ -14,7 +14,9 @@ const mainPath = {
   AuthPasswordRecovery: '/password-recovery/:slug',
   order: '/order',
   orderTracking: '/order-tracking',
-  privacyAndTerms: '/privacy-and-terms'
+  privacyAndTerms: '/privacy-and-terms',
+  checkoutSuccess: '/checkout/success',
+  checkoutCancel: '/checkout/cancel'
 } as const
 export default mainPath
 

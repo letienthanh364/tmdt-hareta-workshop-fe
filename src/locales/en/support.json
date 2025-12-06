@@ -94,6 +94,10 @@
     ". We look forward to serving you again.": ". We look forward to serving you again.",
     "Best regards,": "Best regards,",
     "Hareta Workshop Team": "Hareta Workshop Team",
+    "Pay with Stripe": "Pay with Stripe",
+    "Redirecting to Stripe...": "Redirecting to Stripe...",
+    "Unable to start Stripe checkout": "Unable to start Stripe checkout",
+    "Stripe checkout error": "We couldn't open Stripe checkout. Please try again.",
     "sample": "sample"
   }
 }

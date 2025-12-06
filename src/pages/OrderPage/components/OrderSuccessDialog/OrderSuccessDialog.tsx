@@ -11,13 +11,25 @@ interface Props {
   handleClose: () => void
   handleConfirm: (failed: boolean) => () => void
   orderId: string
+  onStripeCheckout: () => void
+  stripeCheckoutLoading: boolean
+  stripeCheckoutError?: string
 }
 
-export default function OrderSuccessDialog({ isOpen, handleClose, handleConfirm, orderId }: Props) {
+export default function OrderSuccessDialog({
+  isOpen,
+  handleClose,
+  handleConfirm,
+  orderId,
+  onStripeCheckout,
+  stripeCheckoutLoading,
+  stripeCheckoutError
+}: Props) {
   const { theme } = useContext(AppContext)
 
   //! Multi languages
   const { t } = useTranslation('order')
+  const isStripeDisabled = stripeCheckoutLoading || !orderId
 
   return (
     <DialogPopup
@@ -54,14 +66,22 @@ export default function OrderSuccessDialog({ isOpen, handleClose, handleConfirm,
             {t('layout.Thank you for placing your order with Hareta Workshop.')}
           </p>
         </div>
-        <div className='flex w-full items-center justify-center'>
+        <div className='flex w-full flex-col items-center justify-center space-y-3 tablet:flex-row tablet:space-x-3 tablet:space-y-0'>
           <button
-            className='rounded-2xl bg-haretaColor px-4 py-2 font-medium text-darkText hover:bg-primaryColor'
+            className='w-full rounded-2xl bg-haretaColor px-4 py-2 font-medium text-darkText hover:bg-primaryColor tablet:w-auto'
             onClick={handleConfirm(false)}
           >
             {t('layout.Go to payment page')}
           </button>
+          <button
+            disabled={isStripeDisabled}
+            className='w-full rounded-2xl border-2 border-haretaColor px-4 py-2 font-medium text-haretaColor hover:bg-haretaColor hover:text-darkText disabled:cursor-not-allowed disabled:opacity-60 tablet:w-auto'
+            onClick={onStripeCheckout}
+          >
+            {stripeCheckoutLoading ? t('layout.Redirecting to Stripe...') : t('layout.Pay with Stripe')}
+          </button>
         </div>
+        {stripeCheckoutError && <p className='text-center text-sm font-medium text-red-500'>{stripeCheckoutError}</p>}
       </div>
     </DialogPopup>
   )

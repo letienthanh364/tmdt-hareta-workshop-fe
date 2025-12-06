@@ -95,6 +95,10 @@
     ". We look forward to serving you again.": ". Chúng tôi mong được phục vụ bạn lần nữa.",
     "Best regards,": "Trân trọng,",
     "Hareta Workshop Team": "Đội Ngũ Hareta Workshop",
+    "Pay with Stripe": "Thanh toán qua Stripe",
+    "Redirecting to Stripe...": "Đang chuyển đến Stripe...",
+    "Unable to start Stripe checkout": "Không thể mở trang thanh toán Stripe",
+    "Stripe checkout error": "Không thể mở trang thanh toán Stripe. Vui lòng thử lại.",
     "sample": "sample"
   }
 }

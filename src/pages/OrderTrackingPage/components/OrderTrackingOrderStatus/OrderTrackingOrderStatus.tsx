@@ -24,6 +24,9 @@ export default function OrderTrackingOrderStatus({ orderDetail }: Props) {
 
   //! Handle status
   const orderStatus = orderDetail.status
+  const paymentStatus = orderDetail.payment_status
+  const finalStatus = orderStatus === 0 ? orderStatus + paymentStatus : orderStatus
+
   const statusList: Status[] = [
     {
       stateNumber: 0,
@@ -64,7 +67,7 @@ export default function OrderTrackingOrderStatus({ orderDetail }: Props) {
               <div
                 key={status.stateNumber}
                 className={classNames('col-span-1 space-y-6', {
-                  'opacity-20': orderStatus < index
+                  'opacity-20': finalStatus < index
                 })}
               >
                 <div className='relative flex h-12 items-center justify-center desktop:h-16'>
@@ -101,7 +104,7 @@ export default function OrderTrackingOrderStatus({ orderDetail }: Props) {
                 </div>
                 <div className='space-y-4 text-pretty pl-8'>
                   <p className='text-sm tablet:text-base desktop:text-lg'>{status.stateDescription}</p>
-                  {isHead && orderStatus == 0 && <OrderTrackingNavigateToPayment order={orderDetail} />}
+                  {isHead && paymentStatus === 0 && <OrderTrackingNavigateToPayment order={orderDetail} />}
                 </div>
               </div>
             )
@@ -117,7 +120,7 @@ export default function OrderTrackingOrderStatus({ orderDetail }: Props) {
               <div
                 key={status.stateNumber}
                 className={classNames('col-span-1 space-y-2', {
-                  'opacity-20': orderStatus < index
+                  'opacity-20': finalStatus < index
                 })}
               >
                 <div className='relative flex h-10 items-center justify-center'>
@@ -156,7 +159,7 @@ export default function OrderTrackingOrderStatus({ orderDetail }: Props) {
                 </div>
                 <div className='space-y-4 text-pretty pl-5 pr-10'>
                   <p className=''>{status.stateDescription}</p>
-                  {isHead && orderStatus == 0 && <OrderTrackingNavigateToPayment order={orderDetail} />}
+                  {isHead && paymentStatus === 0 && <OrderTrackingNavigateToPayment order={orderDetail} />}
                 </div>
               </div>
             )

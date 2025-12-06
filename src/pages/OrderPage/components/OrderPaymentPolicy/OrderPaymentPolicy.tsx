@@ -25,21 +25,23 @@ export default function OrderPaymentPolicy({ isOrderTrackingPayment }: Props) {
       </p>
       <div className='my-6 w-full border-t border-black/60 dark:border-white/60'></div>
       <div className='h-full py-4 text-base uppercase desktop:text-lg desktopLarge:text-xl'>
-        <div className=''>
-          <p className=''>
-            {t('payment.At the moment we only accept')}{' '}
-            <span className='font-medium text-haretaColor'>{t('payment.Online payment')}</span>{' '}
-            {t('payment.due to our')}{' '}
+        <div>
+          <p className='normal-case text-pretty'>
+            {t('payment.supportedPaymentsIntro')}{' '}
             <Link to={mainPath.privacyAndTerms} className='font-medium text-haretaColor hover:text-primaryColor'>
               {t('layout.payment policy')}
             </Link>
+            .
+          </p>
+          <p className='mt-2 text-sm normal-case text-darkText/70 dark:text-lightText/80 desktop:text-base desktopLarge:text-lg'>
+            {t('payment.stripeRedirectInfo')}
           </p>
         </div>
         <div className='mt-4'>
           <p className='font-medium uppercase'>
             {t('payment.PLEASE COMPLETE YOUR PAYMENT IN 48 HOURS AFTER PLACING YOUR ORDER')}
           </p>
-          <div className='mt-6 grid grid-cols-1 gap-6 text-base tablet:grid-cols-2 desktop:gap-12 desktopLarge:text-lg'>
+          <div className='mt-6 grid grid-cols-1 gap-6 text-base tablet:grid-cols-2 desktop:grid-cols-3 desktop:gap-12 desktopLarge:text-lg'>
             <div className='col-span-1 justify-center space-y-2'>
               <div className='w-full text-center text-lg font-bold desktopLarge:text-xl'>
                 {t('payment.NATIONAL PAYMENT')}
@@ -67,6 +69,14 @@ export default function OrderPaymentPolicy({ isOrderTrackingPayment }: Props) {
               </div>
               <div className='w-full text-center'>{t('payment.or')}</div>
               <p className='w-full text-center font-medium normal-case'>paypal.me/thanhletien364</p>
+            </div>
+            <div className='col-span-1 justify-center space-y-4 rounded-3xl border border-dashed border-black/40 p-6 text-center normal-case dark:border-white/40'>
+              <div className='uppercase'>
+                <div className='text-lg font-bold desktopLarge:text-xl'>{t('payment.STRIPE PAYMENT')}</div>
+                <div className='text-lg font-bold desktopLarge:text-xl'>{t('payment.(STRIPE)')}</div>
+              </div>
+              <p className='text-sm desktop:text-base desktopLarge:text-lg'>{t('payment.Stripe description 1')}</p>
+              <p className='text-sm desktop:text-base desktopLarge:text-lg'>{t('payment.Stripe description 2')}</p>
             </div>
           </div>
         </div>

@@ -28,6 +28,7 @@ import { Order } from 'src/types/order.type'
 import OrderErrorDialog from '../../components/OrderErrorDialog'
 import { HttpStatusMessage } from 'src/constants/httpStatusMessage'
 import { ErrorRespone } from 'src/types/utils.type'
+import paymentApi from 'src/apis/payment.api'
 
 export default function OrderCheckout() {
   const {
@@ -42,6 +43,7 @@ export default function OrderCheckout() {
   } = useContext(OrderContext)
   const { isAuthenticated } = useContext(AppContext)
   const { temporaryPurchases, setTemporaryPurchases, setUnavailablePurchaseIds } = useContext(CartContext)
+  const { t } = useTranslation('order')
 
   const [successDialog, setSuccesDialog] = useState(false)
   const [orderId, setOrderId] = useState<string>('')
@@ -50,6 +52,7 @@ export default function OrderCheckout() {
   const [successOrder, setSuccessOrder] = useState<Order | null>(null)
   const [errorDialog, setErrorDialog] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
+  const [stripeCheckoutError, setStripeCheckoutError] = useState<string>('')
 
   const viewPort = useViewport()
   const isMobile = viewPort.width <= 768
@@ -104,6 +107,36 @@ export default function OrderCheckout() {
     return purchase.quantity > purchase.item.quantity
   })
 
+  //! Stripe checkout integration
+  const createStripeCheckoutMutation = useMutation({
+    mutationFn: (currentOrderId: string) =>
+      paymentApi.createCheckoutSession({ order_id: currentOrderId }, { isGuest: !isAuthenticated }),
+    onSuccess: (response) => {
+      const checkoutUrl = response.data.data.checkout_url
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl
+        return
+      }
+      setStripeCheckoutError(t('layout.Unable to start Stripe checkout'))
+    },
+    onError: (error) => {
+      let errMsg = ''
+      if (isAxiosBadRequestError<ErrorRespone>(error)) {
+        const formError = error.response?.data
+        if (formError) {
+          errMsg = HttpStatusMessage.get(formError.error_key) || ''
+        }
+      }
+      setStripeCheckoutError(errMsg || t('error.Something went wrong'))
+    }
+  })
+
+  const handleStripeCheckout = () => {
+    if (!orderId || createStripeCheckoutMutation.isPending) return
+    setStripeCheckoutError('')
+    createStripeCheckoutMutation.mutate(orderId)
+  }
+
   //! Placing order for user
   const queryClient = useQueryClient()
   const createOrderMutation = useMutation({ mutationFn: orderApi.createOrderForUser })
@@ -130,6 +163,7 @@ export default function OrderCheckout() {
             setOrderId(response.data.data.id)
             queryClient.invalidateQueries({ queryKey: ['purchases'] })
             setProcessingDialog(false)
+            setStripeCheckoutError('')
             setSuccesDialog(true)
           },
           onError: (error) => {
@@ -164,7 +198,7 @@ export default function OrderCheckout() {
   const placeOrderWithoutLogin = handleSubmit(async (data) => {
     setProcessingDialog(true)
     setErrorDialog(false)
-    setSuccesDialog(false)
+    handleCloseSuccessDialog()
     //? fetch data to check quantity
     const unavailableTempPurchases = itemList.filter((item) => {
       getProductDataMutation.mutateAsync(item.id).then((productData) => {
@@ -194,6 +228,7 @@ export default function OrderCheckout() {
           setOrderId(response.data.data.id)
           queryClient.invalidateQueries({ queryKey: ['purchases'] })
           setProcessingDialog(false)
+          setStripeCheckoutError('')
           setSuccesDialog(true)
           setErrorDialog(false)
         },
@@ -225,8 +260,13 @@ export default function OrderCheckout() {
   //! Handle confirm
   const navigate = useNavigate()
 
-  const userConfirm = (failed: boolean) => {
+  const handleCloseSuccessDialog = () => {
     setSuccesDialog(false)
+    setStripeCheckoutError('')
+  }
+
+  const userConfirm = (failed: boolean) => {
+    handleCloseSuccessDialog()
     setOrderList([])
     setOrderListToLS([])
     setConfirmPayment(false)
@@ -244,7 +284,7 @@ export default function OrderCheckout() {
 
   const guestConfirm = (failed: boolean) => {
     const orderIdList = tempOrderList.map((tempOrderItem) => tempOrderItem.id)
-    setSuccesDialog(false)
+    handleCloseSuccessDialog()
     if (!failed) {
       setTemporaryPurchases(temporaryPurchases.filter((tempPurchase) => !orderIdList.includes(tempPurchase.id)))
     }
@@ -266,9 +306,6 @@ export default function OrderCheckout() {
   const handleConfirm = (failed: boolean) => () => {
     isAuthenticated ? userConfirm(failed) : guestConfirm(failed)
   }
-
-  //! Multi languages
-  const { t } = useTranslation('order')
 
   return (
     <div className='bg-lightBg py-2 duration-200 dark:bg-darkBg desktop:py-3 desktopLarge:py-4'>
@@ -302,8 +339,11 @@ export default function OrderCheckout() {
       <OrderSuccessDialog
         handleConfirm={handleConfirm}
         isOpen={successDialog}
-        handleClose={() => setSuccesDialog(false)}
+        handleClose={handleCloseSuccessDialog}
         orderId={orderId}
+        onStripeCheckout={handleStripeCheckout}
+        stripeCheckoutLoading={createStripeCheckoutMutation.isPending}
+        stripeCheckoutError={stripeCheckoutError}
       />
 
       {/*  Processing dialog */}
